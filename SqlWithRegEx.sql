@@ -15,6 +15,8 @@
 -- | 5       | Marwan    | quarz#2020@leetcode.com |
 -- | 6       | David     | david69@gmail.com       |
 -- | 7       | Shapiro   | .shapo@leetcode.com     |
+-- | 8       | David1    | david1@xyz?com          |
+-- | 9       | David2    | david2@xyz.comABC       |
 -- +---------+-----------+-------------------------+
 -- Output: 
 -- +---------+-----------+-------------------------+
@@ -27,8 +29,8 @@
 
 select user_id, name, mail
 from Users
-where mail REGEXP '^[a-zA-Z][a-zA-Z0-9\\_\\-\\.]*@xyz.com';
+where mail REGEXP '^[a-zA-Z][a-zA-Z0-9\\_\\-\\.]*@xyz[.]com$';
 
 select user_id, name, mail
 from Users
-where mail REGEXP '^[a-zA-Z][a-zA-Z0-9_\\-.]*@xyz.com';
+where mail REGEXP '^[a-zA-Z][a-zA-Z0-9_\\-.]*@xyz[.]com$';
